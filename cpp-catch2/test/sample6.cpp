@@ -16,8 +16,8 @@ TEST_CASE("receive commands") {
         REQUIRE(rover.statusOk());
     } else {
         // outside range of plateau
-        REQUIRE(!rover.statusOk())
+        REQUIRE(!rover.statusOk());
     }
 
-    
+
 }
