@@ -1,38 +1,37 @@
 #ifndef MARS_ROVER_H
 #define MARS_ROVER_H
 
-class Plateau {
-public:
-    Plateau(int width, int breadth) {
-
-    }
-};
-
-class Coordinates {
+class Coordinates 
+{
 
 public:
-    Coordinates(int x, int y) {
-
-    }
+    Coordinates(int x, int y) {}
     int x;
     int y;
 };
 
-enum Direction {
+enum Direction 
+{
     N,S,E,W
 };
 
-class Obstacle {
+class Obstacle 
+{
 public:
     Obstacle(Coordinates position) {}
 };
 
-class MarsRover {
+class Plateau 
+{
+public:
+    Plateau(int width, int breadth) {}
+    void setObstacles(std::vector<Obstacle> obstacles);
+};
+
+class MarsRover 
+{
 public:
     MarsRover(Plateau plateau, Direction direction, Coordinates startingPosition) {}
-
-    MarsRover(Coordinates coordinates, Coordinates coordinates1, Direction direction, std::vector<Obstacle> vector) {
-    }
 
     std::string currentLocation();
 
