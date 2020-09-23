@@ -40,13 +40,21 @@ type Plateau struct {
 	obstacles []Obstacle
 }
 
+type Status int
 
-
+const (
+	OK Status = iota
+	NOK
+)
+func (s Status) String() string {
+	return [...]string{"OK", "NOK"}[s]
+}
 
 type MarsRover struct {
 	plateau Plateau
 	heading Direction
 	position Coordinates
+	status Status
 }
 
 func (r MarsRover) turnLeft() {
@@ -63,4 +71,16 @@ func (r MarsRover) acceptCommands(commands []Command) {
 
 func (r MarsRover) coordinates() Coordinates {
 	return Coordinates{0, 0}
+}
+
+func (r MarsRover) forward() {
+
+}
+
+func (r MarsRover) backward() {
+
+}
+
+func (r MarsRover) turnRight() {
+
 }
