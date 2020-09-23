@@ -16,7 +16,7 @@ func TestReceiveCommands(t *testing.T) {
 		marsRover.forward()
 	}
 
-	if forward < 10 {
+	if forward < 5 {
 		assert.Equal(t, marsRover.status, OK)
 	} else {
 		assert.Equal(t, marsRover.status, NOK)
